@@ -1,0 +1,30 @@
+<main class="main single" id="main">
+    <div class="main-inner">
+
+        {{ $attrs := partial "utils/data-attributes.html" . }}
+
+        <article class="content post h-entry"
+        {{- if $attrs.smallCaps }} data-small-caps="true"{{ end }}
+        {{- with $attrs.align }} data-align="{{ . }}"{{ end }}
+        {{- with $attrs.type }} data-type="{{ . }}"{{ end }}
+        {{- with $attrs.layout }} data-layout="{{ . }}"{{ end }}
+        {{- if $attrs.indent }} data-indent="true"{{ end }}
+        {{- if $attrs.tocNum }} data-toc-num="true"{{ end }}>
+
+            <div class="post-body e-content">
+              {{ partial "utils/about_content.html" . }}
+            </div>
+
+
+        </article>
+
+        {{ partial "components/post-gitinfo.html" . }}
+
+        {{ partial "components/minimal-footer.html" . }}
+
+        {{ partial "components/minimal-footer-about.html" . }}
+
+        {{ partial "components/post-nav.html" . }}
+
+    </div>
+</main>
