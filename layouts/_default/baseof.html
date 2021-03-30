@@ -17,5 +17,8 @@
         </div>
         {{ partial "components/service-worker.html" . }}
         {{ partial "third-party/script.html" . }}
+        {{ if hugo.IsProduction }}
+        {{ partial "cookie-notice.html" }}
+        {{ end }}
     </body>
 </html>
