@@ -13,7 +13,7 @@
             {{ template "site-brand" . }}
         {{ end }}
         {{ "<!-- isso -->" | safeHTML }}
-        <script data-isso="https://comments.livho.blog/" src="https://comments.livho.blog/js/embed.min.js"></script>
+        <script data-isso="https://comments.livho.blog/" data-isso-require-author="true" src="https://comments.livho.blog/js/embed.min.js"></script>
         {{ "<!-- end isso -->" | safeHTML }}
     </header>
 {{ end }}
