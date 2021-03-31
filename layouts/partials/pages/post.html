@@ -63,6 +63,12 @@
         {{ partial "components/post-nav.html" . }}
 
         {{ partial "components/comments.html" . }}
+        
+        {{"<!-- begin comments //-->" | safeHTML}}
+        <section id="isso-thread">
+
+        </section>
+        {{"<!-- end comments //-->" | safeHTML}}
 
     </div>
 </main>
