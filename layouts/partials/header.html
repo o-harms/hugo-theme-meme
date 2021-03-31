@@ -12,6 +12,9 @@
         {{ else }}
             {{ template "site-brand" . }}
         {{ end }}
+        {{ "<!-- isso -->" | safeHTML }}
+        <script data-isso="{{ .Site.BaseURL }}isso/" src="{{ .Site.BaseURL }}isso/js/embed.min.js"></script>
+        {{ "<!-- end isso -->" | safeHTML }}
     </header>
 {{ end }}
 
